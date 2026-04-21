@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BridgeXArc</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="logo">BridgeXArc</div>
+
+  <div class="nav-menu">
+ <a href="#" class="nav-link" onclick="scrollToTop()">Home</a>
+  <a href="#bridge" class="nav-link">Bridge</a>
+  <a href="#transactions" class="nav-link">Transactions</a>
+  <a href="#about" class="nav-link">About</a>
+</div>
+
+<button class="connect-btn" id="connectBtn" onclick="openPopup()">
+  Connect
+</button></div>
+
+<div class="hero">
+  <canvas id="particles"></canvas>
+
+  <div class="hero-content">
+    <h1>Bridge Assets Across Chains 🌉</h1>
+    <p>Seamless, fast and secure transfers</p>
+<button class="hero-btn" onclick="scrollToBridge()">
+  Start Bridging →
+</button>  </div>
+</div>
+<div id="bridge" class="section bridge-section">
+
+  <div class="bridge-card">
+    <div class="bridge-visual">
+  <div class="chain left">ETH</div>
+
+  <div class="bridge-line">
+    <div class="moving-token"></div>
+  </div>
+
+  <div class="chain right">POLY</div>
+</div>
+
+    <h3>Bridge Tokens</h3>
+    
+
+    <!-- From -->
+    <div class="field">
+      <label>From</label>
+      <select>
+        <option>Ethereum</option>
+        <option>Polygon</option>
+        <option>Bitcoin</option>
+        <option>ETH</option>
+<option>BTC</option>
+<option>USDT</option>
+<option>BNB</option>
+<option>SOL</option>
+<option>XRP</option>
+<option>ADA</option>
+<option>DOGE</option>
+<option>MATIC</option>
+<option>DOT</option>
+      </select>
+    </div>
+
+    <!-- Arrow -->
+    <div class="bridge-arrow">⇅</div>
+
+    <!-- To -->
+    <div class="field">
+      <label>To</label>
+      <select>
+        <option>Polygon</option>
+        <option>Ethereum</option>
+        <option>Bitcoin</option>
+        <option>ETH</option>
+<option>BTC</option>
+<option>USDT</option>
+<option>BNB</option>
+<option>SOL</option>
+<option>XRP</option>
+<option>ADA</option>
+<option>DOGE</option>
+<option>MATIC</option>
+<option>DOT</option>
+      </select>
+    </div>
+
+    <!-- Amount -->
+    <div class="field">
+      <label>Amount</label>
+<input type="number" id="amountInput" placeholder="Enter amount">    </div>
+
+    <!-- Button -->
+<button class="bridge-btn" onclick="startBridgeAnimation()">
+  Bridge Now
+</button>
+    <!-- Status -->
+    <div class="bridge-steps" id="bridgeSteps">
+  <p>Ready to bridge</p>
+</div>
+
+  </div>
+
+</div>
+
+<div id="transactions" class="section transactions-section">
+
+  <h2>Transaction History</h2>
+
+  <!-- Filters -->
+  <div class="filters">
+    <select>
+      <option>All Currency</option>
+      <option>ARC</option>
+      <option>aUSD</option>
+      <option>ETH</option>
+<option>BTC</option>
+<option>USDT</option>
+<option>BNB</option>
+<option>SOL</option>
+<option>XRP</option>
+<option>ADA</option>
+<option>DOGE</option>
+<option>MATIC</option>
+<option>DOT</option>
+    </select>
+
+    <select>
+      <option>2026</option>
+      <option>2025</option>
+      <option>2024</option>
+      <option>2023</option>
+      <option>2022</option>
+      <option>2021</option>
+    </select>
+
+    <input type="date">
+  </div>
+
+  <!-- Table -->
+  <div class="tx-table">
+    <div class="tx-row header">
+      <span>Date</span>
+      <span>From</span>
+      <span>To</span>
+      <span>Amount</span>
+    </div>
+
+    <div class="tx-row">
+      <span>12 Apr</span>
+      <span>ETH</span>
+      <span>POLY</span>
+      <span>120 ARC</span>
+    </div>
+<div class="tx-row"><span>12 Apr</span><span>ETH</span><span>MATIC</span><span>120</span></div>
+<div class="tx-row"><span>11 Apr</span><span>BTC</span><span>ETH</span><span>0.5</span></div>
+<div class="tx-row"><span>10 Apr</span><span>SOL</span><span>USDT</span><span>300</span></div>
+<div class="tx-row"><span>09 Apr</span><span>ADA</span><span>BNB</span><span>1000</span></div>
+<div class="tx-row"><span>08 Apr</span><span>DOGE</span><span>ETH</span><span>5000</span></div>
+<div class="tx-row"><span>07 Apr</span><span>XRP</span><span>BTC</span><span>700</span></div>
+<div class="tx-row"><span>06 Apr</span><span>MATIC</span><span>SOL</span><span>200</span></div>
+<div class="tx-row"><span>05 Apr</span><span>DOT</span><span>USDT</span><span>150</span></div>
+<div class="tx-row"><span>04 Apr</span><span>BNB</span><span>ETH</span><span>20</span></div>
+<div class="tx-row"><span>03 Apr</span><span>ETH</span><span>BTC</span><span>1.2</span></div>
+  </div>
+
+</div>
+
+<div id="about" class="section">
+
+  <h2>About BridgeX</h2>
+
+  <p>
+    BridgeX is a simulated Web3 cross-chain bridge platform designed to demonstrate how digital assets move across different blockchain networks.
+  </p>
+
+  <p>
+    It allows users to select different cryptocurrencies and simulate bridging them across networks with real-time visual feedback and animations.
+  </p>
+
+  <p>
+    The platform focuses on user experience, transparency, and intuitive design to replicate how modern decentralized finance (DeFi) applications work.
+  </p>
+
+  <p>
+    BridgeX is not connected to real blockchain networks and uses mock data to provide a safe and interactive learning experience.
+  </p>
+
+</div>
+
+<script src="app.js"></script>
+
+<!-- Footer -->
+<footer class="footer">
+
+  <div class="footer-content">
+
+    <div class="footer-logo">BridgeX</div>
+
+    <div class="footer-links">
+      <a href="#" onclick="scrollToTop()">Home</a>  
+      <a href="#bridge">Bridge</a>
+      <a href="#transactions">Transactions</a>
+      <a href="#about">About</a>
+    </div>
+
+    <p class="footer-text">
+      © 2026 BridgeX. All rights reserved.
+    </p>
+
+  </div>
+
+</footer>
+<!-- Wallet Popup -->
+<div class="popup" id="walletPopup">
+
+  <div class="popup-box">
+
+    <h3>Connect Wallet</h3>
+
+    <select id="walletType">
+      <option>MetaMask</option>
+      <option>WalletConnect</option>
+      <option>Coinbase Wallet</option>
+    </select>
+
+    <input type="text" id="walletAddress" placeholder="Enter Wallet Address">
+
+    <button onclick="connectWallet()">Connect</button>
+    <button onclick="closePopup()">Cancel</button>
+
+  </div>
+
+</div>
+<div id="successBanner" class="success-banner">
+  Wallet Connected Successfully ✅
+</div>
+</body>
+</html>
